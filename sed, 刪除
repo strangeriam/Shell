@@ -1,0 +1,21 @@
+文件內容:
+- this is line 1 on original test.file!
+- this is line 2 on original test.file!!
+- this is line 3 on original test.file!!!
+
+刪除第三行
+    - # sed -i "3d' test.file
+    - # cat test.file
+        - this is line 1 on original test.file!
+        - this is line 2 on original test.file!!
+
+Parameter
+- d ==> 刪除指定行號
+- c\<字串> ==> 以 <字串> 取代指定的行號
+- a\<字串> ==> 在指定的行號後新增一行 <字串>
+- a lot of parameters.
+
+刪除含有 ‘#’ 號的行
+    sed -e '/#/d' [targetFile]
+
+done.
