@@ -1,0 +1,19 @@
+### 定義變數, 前面不加 $ 符號.
+### 等號的二邊不能有空白, 否則將出現錯誤.
+### 定義一個變數 var 並且設定值為 “HelloWorld”.
+
+    var1=HelloWorld
+### or
+    var2="Hello World"
+
+### 讀取變數, 要加 $ 符號.
+
+    echo $var1
+
+### 變數內容為 “需執行的 Linux 指令”.  `uname -v` 的 ``是 ESC下方的按鍵 “~`”.
+
+    var=`uname -v`
+    echo $var
+    #34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019
+
+Done.
