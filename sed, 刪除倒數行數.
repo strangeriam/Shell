@@ -1,0 +1,14 @@
+刪除最後一行
+    sed -e '$d' zzz.txt > tmp.txt
+
+刪除倒數第三行
+    tac zzz.txt|sed '3d'|tac > tmp.txt
+
+刪除倒數第 二, 三行
+    tac zzz.txt|sed '2,3d'|tac > tmp.txt
+
+刪除倒數第一, 二, 三行
+    head -n -3 zzz.txt > tmp.txt
+    
+
+Done.
