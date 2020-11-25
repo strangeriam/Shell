@@ -1,0 +1,22 @@
+file content of aaa.txt
+    root@OpenWrt:/tmp# 
+    root@OpenWrt:/tmp# cat bbb.txt 
+    72:[    0.234368] hw-breakpoint: CPU 1 failed to disable vector catch
+    246:[   18.778703] hub 4-0:1.0: config failed, hub doesn't have any ports! (err -19)
+    410:[   36.295794] qdf_fs_read[61]: Fail to Open File /tmp/wifi0.caldataol_transfer_bin_file: flash cal data len 8194 doesn't equal to 12064
+    609:[   38.870267] qdf_fs_read[61]: Fail to Open File /tmp/wifi1.caldataol_transfer_bin_file: flash cal data len 0 doesn't equal to 12064
+    root@OpenWrt:/tmp# 
+
+執行, 顯示第2行和第3行.
+    root@OpenWrt:/tmp# 
+    root@OpenWrt:/tmp# sed -n '2,3p' bbb.log 
+    246:[   18.788886] hub 4-0:1.0: config failed, hub doesn't have any ports! (err -19)
+    410:[   37.919574] qdf_fs_read[61]: Fail to Open File /tmp/wifi0.caldataol_transfer_bin_file: flash cal data len 25189 doesn't equal to 12064
+    root@OpenWrt:/tmp# 
+
+執行, 顯示第1行.
+    root@OpenWrt:/tmp# sed -n '1,1p' bbb.log 
+    72:[    0.234363] hw-breakpoint: CPU 1 failed to disable vector catch
+    root@OpenWrt:/tmp# 
+    
+Done.
