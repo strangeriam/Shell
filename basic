@@ -1,0 +1,15 @@
+
+### Binary 路徑宣告 #!/bin/bash
+    #!/bin/bash
+    PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~bin
+    export PATH
+
+### Comment 註解 #
+    # this is comment
+    ls -la
+
+### 指令分隔 ;
+    pwd ; ls -la
+
+### 跳行
+    echo -e "\n"
