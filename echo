@@ -14,3 +14,50 @@
 ### -e 帶指令輸入. 如例, \n 加入 return 成為兩行.
     echo -e "line1\nline2" > /tmp/file1.sh
 
+
+Example
+原有文件: test.file
+文件內容:
+
+        - this is line 1 on original test.file!
+        - this is line 2 on original test.file!!
+        - this is line 3 on original test.file!!!
+- 文件已有文字, 新增一行在文件最後.
+    - # echo "add one more line" >> test.file
+    - # cat test.file
+        - this is line 1 on original test.file!
+        - this is line 2 on original test.file!!
+        - this is line 3 on original test.file!!!
+        - add one more line
+- 新增兩行指令在script file最後面.
+    - # echo -e "sleep 2\n./mnt/usb/sample_uarttest" >> test.sh
+    - # cat test.sh
+        - this is line 1 on original test.file!
+        - this is line 2 on original test.file!!
+        - this is line 3 on original test.file!!!
+        - sleep 2
+        - ./mnt/usb/sample_uarttest
+- 新增 tmp.file 的內容至 test.file 後面.
+    - tmp.file content:
+        - there is line A on tmp.file~
+        - there is line B on tmp.file~~
+        - there is line C on tmp.file~~~
+    - # cat tmp.file >> test.file
+    - # cat test.file
+        - this is line 1 on original test.file!
+        - this is line 2 on original test.file!!
+        - this is line 3 on original test.file!!!
+        - 
+        - there is line A on tmp.file~
+        - there is line B on tmp.file~~
+        - there is line C on tmp.file~~~
+- 在 test.file 內容和 tmp.file 內容中間加入一行 Hello World!!!
+    - # echo "Hello World!!!" | cat - tmp.file >> test.file
+    - # cat test.file
+        - this is line 1 on original test.file!
+        - this is line 2 on original test.file!!
+        - this is line 3 on original test.file!!!
+        - Hello World!!!
+        - there is line A on tmp.file~
+        - there is line B on tmp.file~~
+        - there is line C on tmp.file~~~
