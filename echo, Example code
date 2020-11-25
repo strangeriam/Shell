@@ -1,0 +1,26 @@
+
+複製原汁原味檔案
+不改變原本檔案內容與格式下, 複製檔案至另一位置.
+
+    echo | cat - /mnt/usb/init_9372.sh > /data/local/tmp/init_9372.sh
+
+複製檔案內容至另一文件的最後面接續.
+
+    cat /tmp/aaa.txt | grep Fail >> /tmp/bbb.txt
+
+複製多行接續目的地檔的最後.
+內容: [1] 空一行 → [2] 休息5秒 → [3] 字串
+
+    echo -e "\nsleep 5;/data/local/tmp/init_9372.sh" >> /system/etc/init.bigfish.sh
+
+Others, unknow function.
+
+    cat /data/hw_info/serial_numbers && echo
+
+2020-10-12: 找到驗證, 與方法瞭解.
+例如:
+直接輸出 指令 1,
+因 model_name 內容沒斷行, 造成 內容與Lindex 提示列連在一起.
+指令2, 在最後加入 斷行.
+
+Done.
