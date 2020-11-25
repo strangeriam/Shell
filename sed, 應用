@@ -1,0 +1,29 @@
+
+(1) sed -e '1d' inputfile (刪除第一行)
+那麼刪除第x行呢?刪除第x1,x2,x3行呢？
+sed -e 'xd' inputfile
+sed -e 'x1d' -e 'x2d' -e 'x3d' inputfile
+當然也許還有更好的辦法。
+
+(2) sed -e '1,3d' file (刪除第一到第三行)
+思考：刪除第n行到第m行?也就是
+sed -e 'n,md' file
+刪除第一行到最後一行
+sed -e '1,$d' file #$ 最後一行和一行的最後
+
+(3) sed -e '/#/d' file (刪除含有'#'號的行)
+思考：刪除含有字母xx的行
+sed -e '/xx/d' file
+思考: 刪除除含有字串xx的所有行
+sed -e '/xx/!d' file
+
+(4) sed -e '/word1/, /word2/d' file (刪除從含有單詞word1到含有單詞word2的行)
+sed -e '10,/word1/d' file
+刪除檔中從第10行到含有word1的行
+sed -e '/word1/,10/d' file
+和上面的匹配相反，刪除從含有word1的行到第10行
+
+(5) sed -e '/t.*t/d' file (刪除含有兩個t的行)
+思考：刪除含有指定正在運算式匹配的行。
+
+Done.
