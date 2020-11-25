@@ -5,3 +5,6 @@
     sed "/${var}/"d file
 ### or 變數是路徑 var=/home/josh/tool/ (不能有 # 號)
     sed -e "#$var1#var2#g"
+
+
+Done.
