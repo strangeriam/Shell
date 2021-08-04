@@ -1,0 +1,11 @@
+i=9
+
+while [ $i == 9 ]
+do
+
+sudo gpioset 2 22=1
+sleep 1
+sudo gpioset 2 22=0
+sleep 1
+
+done
