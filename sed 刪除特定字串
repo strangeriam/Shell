@@ -11,3 +11,12 @@ sed 's/\$//'
 
 sed -r -e 's/\x08//g' aaa.log > bbb.log
 ## 刪除 ASCII 的 ^H.
+
+## 刪除三種字串 ASCII, 數字 & 字串.
+## ASCII 的 ^H (0x08)"
+## 數字 0 ~ 9.
+## 字串 的 "setting" & "testing".
+sed -r -e 's/\x08//g' -e 's/[0-9]+//g' -e 's/setting//g' -e 's/testing//g' aaa.log > bbb.log
+
+## 刪除 空白
+sed -r -e 's/ //g' bbb.log > ccc.log
