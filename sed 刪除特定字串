@@ -1,10 +1,13 @@
-sed ‘s/setting/testing/g’ /tmp/tmp.log
+sed 's/setting/testing/g' /tmp/tmp.log
 # 將全文中的 setting 置換成 testing.
 # s --> 搜尋與取代的命令 [subtitue 代替]
 # g --> global 全面性的意思
 
-sed ‘s/foo/bar/’ /tmp/tmp.log
+sed 's/foo/bar/' /tmp/tmp.log
 # 將foo換成bar, 僅置換一次.
 
-sed ‘s/\$//’
+sed 's/\$//'
 # 將 $ 錢字號刪除(置換成無), 僅置換一次.
+
+sed -r -e 's/\x08//g' aaa.log > bbb.log
+## 刪除 ASCII 的 ^H.
