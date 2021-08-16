@@ -1,0 +1,12 @@
+複製 第一行到第三行.
+# cat /tmp/aaa.log
+StuckAddress:ok
+RandomValue:ok
+CompareXOR:ok
+CompareSUB:ok
+CompareMUL:ok
+
+# sed -n '1,3p' /tmp/bbb.log > /tmp/ccc.log    
+# cat /tmp/ccc.log 
+StuckAddress:ok
+RandomValue:ok
