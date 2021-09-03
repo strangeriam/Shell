@@ -1,0 +1,1 @@
+cat /tmp/tmp.log | sed -e 's/[\|/-]//g' -e 's/\cH//g' -e 's/setting *[0-9]/X/g' -e 's/testing *[0-9]/X/g' -e 's/X[0-9]/X/g' -e 's/X[0-9]/X/g' -e 's/X//g' -e 's/: */: /g' > /tmp/tmp1.log
