@@ -1,6 +1,5 @@
 
 File content:
-    root@OpenWrt:/tmp# 
     root@OpenWrt:/tmp# cat bbb.txt 
     [    0.234364] hw-breakpoint: CPU 3 failed to disable vector catch
     [   18.768869] hub 4-0:1.0: config failed, hub doesn't have any ports! (err -19)
@@ -11,13 +10,10 @@ File content:
     root@OpenWrt:/tmp# 
 
 Example command:
-
-    sed -e '/hw-breakpoint: CPU 3 failed to disable vector catch/
-    d' bbb.txt
+# sed -e '/hw-breakpoint: CPU 3 failed to disable vector catch/d' bbb.txt
 
 Example Code
 file content of bbb.txt
-    root@OpenWrt:/tmp#
     root@OpenWrt:/tmp# cat bbb.txt 
     [    0.234378] hw-breakpoint: CPU 3 failed to disable vector catch
     [   18.758862] hub 4-0:1.0: config failed, hub doesn't have any ports! (err -19)
@@ -40,4 +36,3 @@ file content of bbb.txt
     root@OpenWrt:/tmp# 
 
 
-Done.
